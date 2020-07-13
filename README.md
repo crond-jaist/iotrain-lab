@@ -48,7 +48,7 @@ must be installed manually, as described next.
 		```
 	4. Create and start the Guacamole container:
 		```
-		$ docker-compose up -d 
+		$ docker-compose up -d
 		```
 
 ### Notes
@@ -126,34 +126,50 @@ simulation.
 
 ### Exercise overview
 
-Next we introduce each of the exercises, which are presented here in
-the recommended order for performing them based on topic and
-difficulty level. Click on each exercise name to view the
-corresponding instructions.
+Next we introduce each of the exercises in IoTrain-Lab, which are
+presented here in the recommended order for performing them based on
+topic and difficulty level. Click on each exercise name to view the
+corresponding instructions. Before proceeding, we suggest that you
+first get familiar with the basic aspects of FIT/IoT-LAB by checking
+the [Getting
+started](https://www.iot-lab.info/docs/getting-started/introduction/)
+page of the testbed documentation web site.
 
-1. [Node Control](database/fundamental_training/devices/node_control/README.md): Control a node and get sensor data from it, such as temperature and luminosity
+1. [Node Control](database/fundamental_training/devices/node_control/README.md):
+	Control a node and get sensor data from it, such as temperature and luminosity
 	- _Difficulty:_ Easy
-2. [Ping Testing](database/fundamental_training/protocols/ping_testing/README.md): Test the connectivity between two nodes via ping request/reply exchanges
+2. [Consumption Monitoring](database/fundamental_training/devices/consumption_monitoring/README.md):
+	Monitor the power consumption of an IoT device
 	- _Difficulty:_ Easy
-3. [Consumption Monitoring](database/fundamental_training/devices/consumption_monitoring/README.md): Monitor the power consumption of an IoT device
+3. [Ping Testing](database/fundamental_training/protocols/ping_testing/README.md):
+	Test the connectivity between two nodes via ping request/reply exchanges
 	- _Difficulty:_ Easy
-4. [Radio Monitoring](database/fundamental_training/devices/radio_monitoring/README.md): Monitor the radio activity of two nodes communicating with each other
+4. [Radio Monitoring](database/fundamental_training/devices/radio_monitoring/README.md):
+	Monitor the radio activity of two nodes communicating with each other
 	- _Difficulty:_ Medium
-5. [Radio Sniffing](database/fundamental_training/devices/radio_sniffing/README.md): Capture radio frames and analyze radio communication using Wireshark
+5. [Radio Sniffing](database/fundamental_training/devices/radio_sniffing/README.md):
+	Capture radio frames and analyze radio communication using Wireshark
 	- _Difficulty:_ Medium
-6. [RPL Routing](database/fundamental_training/protocols/rpl_routing/README.md): Practice with the Routing Protocol for Low-Power and Lossy Networks (RPL)
+6. [RPL Routing](database/fundamental_training/protocols/rpl_routing/README.md):
+	Practice with the Routing Protocol for Low-Power and Lossy Networks (RPL)
 	- _Difficulty:_ Medium
-7. [CoAP Protocol](database/fundamental_training/protocols/coap_protocol/README.md): Practice with the Constrained Application Protocol (CoAP)
+7. [CoAP Protocol](database/fundamental_training/protocols/coap_protocol/README.md):
+	Practice with the Constrained Application Protocol (CoAP)
 	- _Difficulty:_ High
-8. [MQTT Protocol](database/fundamental_training/protocols/mqtt_protocol/README.md): Practice with the Message Queuing  Telemetry Transport (MQTT) protocol
+8. [MQTT Protocol](database/fundamental_training/protocols/mqtt_protocol/README.md):
+	Practice with the Message Queuing  Telemetry Transport (MQTT) protocol
 	- _Difficulty:_ High
-9. [Flooding Attack](database/security_training/resource_attacks/flooding_attack/README.md): Experiment with the flooding attack used to increase energy consumption
+9. [Flooding Attack](database/security_training/resource_attacks/flooding_attack/README.md):
+	Experiment with the flooding attack used to increase energy consumption
 	- _Difficulty:_ High
 
 
 ## References
 
-For a research background regarding IoTrain-Lab, please refer to the following document:
-* M. Zhao, "Hands-on IoT Security Training Using IoT Testbeds", Master's thesis, September 2019. https://hdl.handle.net/10119/16217
+For a research background regarding IoTrain-Lab, please refer to the
+following document:
+* M. Zhao, "Hands-on IoT Security Training Using IoT Testbeds",
+  Master's thesis, September 2019. https://hdl.handle.net/10119/16217
 
-For a list of contributors to this project, check the file CONTRIBUTORS included with the source code.
+For a list of contributors to this project, check the file
+CONTRIBUTORS included with the source code.
