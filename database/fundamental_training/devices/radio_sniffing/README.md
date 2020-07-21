@@ -48,9 +48,9 @@ when making the reservation via the "node id" tab:
 
 	For all the nodes you can use the firmware `tutorial_m3.elf`
 	compiled in the exercise `Radio Monitoring`. For the sniffer
-	node, make sure to use the monitoring profile defined at step
-	1. After finishing the settings, click on "Submit experiment"
-	to start the experiment.
+	node, make sure to use the monitoring profile defined at step 1.
+	After finishing the settings, click on "Submit experiment" to
+	start the experiment.
 
 4. Connect to the SSH frontend of the Grenoble site of FIT/IoT-LAB by
 using the `username` you created when you registered with the testbed:

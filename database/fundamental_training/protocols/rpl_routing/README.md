@@ -21,7 +21,7 @@ RIOT OS by leveraging the `gnrc_networking` example provided in the
 RIOT repository of FIT/IoT-LAB.
 
 
-## Procedure
+## Tutorial
 
 1. Connect to the SSH frontend of the Saclay site of FIT/IoT-LAB by
 using the `username` you created when you registered with the testbed:
@@ -71,11 +71,11 @@ portal:
 			- Site: Saclay
 			- Quantity: 3
 
-		Update the node firmware using the file
-		`gnrc_networking.elf` you copied above. After clicking
-		on "Submit experiment", make a note of the experiment
-		and node IDs once they are displayed, as they are
-		needed later.
+			Update the node firmware using the file
+			`gnrc_networking.elf` you copied above. After
+			clicking on "Submit experiment", make a note
+			of the experiment and node IDs once they are
+			displayed, as they are needed later.
 
 4. Initialize the RPL protocol for the interface 7 of all the nodes
 (`m3-10` to `m3-12` in our example):
@@ -86,7 +86,7 @@ portal:
 		```
 
 	- Input `rpl init 7` in the terminal to send the command to
-	all the nodes; the output should look as shown below:
+	all the nodes; the output will be similar to that shown below:
 		```
 		1449177253.320969;m3-11;> rpl init 7
 		1449177253.322160;m3-10;> rpl init 7
@@ -119,8 +119,8 @@ the steps below for this purpose:
 		```
 
 6. Display details about the RPL state of all the nodes in the
-experiment by inputting the command `rpl`. The output should look like
-the screenshot below.
+experiment by inputting the command `rpl`. The output will be similar
+to the screenshot below.
 	<div align=center><img src="rpl_screenshot.png"></div>
 
 7. As information for all the nodes gets mixed in the above output,
