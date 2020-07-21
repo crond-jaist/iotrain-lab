@@ -55,7 +55,7 @@ that the remote application display is forwarded to your computer:
 `.oml`. Make sure to wait until the experiment finishes and the file
 is completely written to disk before checking its content:
 	```
-	$ username@grenoble.iot-lab.info:~$ less ~/.iot-lab/<experiment_ID>/consumption/m3_<node_ID>.oml
+	$ username@grenoble:~$ less ~/.iot-lab/<experiment_ID>/consumption/m3_<node_ID>.oml
 	```
 
 	The file should look similar to the one shown in the figure
@@ -75,7 +75,7 @@ FIT/IoT-LAB:
 	around 2.4 mA.
 	<div align=center><img src="consumption_plot.png"></div>
 
-### Note
+### Notes
 
 * For the commands at steps 6 and 7 above, the correct name of the
   consumption data file is `m3_<node_ID>.oml` (for instance,
