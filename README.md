@@ -136,7 +136,7 @@ started](https://www.iot-lab.info/docs/getting-started/introduction/)
 page of the testbed documentation web site.
 
 1. [Node Control](database/fundamental_training/devices/node_control/README.md):
-	Control a node and get sensor data from it, such as temperature and luminosity
+	Control a node and get its sensor data, such as temperature and luminosity
 	- _Difficulty:_ Easy
 2. [Consumption Monitoring](database/fundamental_training/devices/consumption_monitoring/README.md):
 	Monitor the power consumption of an IoT device
