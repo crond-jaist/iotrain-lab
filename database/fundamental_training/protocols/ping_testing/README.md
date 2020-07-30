@@ -19,7 +19,7 @@ exchanges between two M3 nodes by leveraging the `gnrc_networking`
 example provided in the RIOT repository of FIT/IoT-LAB.
 
 
-## Procedure
+## Tutorial
 
 1. Connect to the SSH frontend of the Saclay site of FIT/IoT-LAB by
 using the `username` you created when you registered with the testbed:
