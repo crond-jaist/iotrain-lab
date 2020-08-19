@@ -19,37 +19,21 @@ FIT/IoT-LAB testbed.
 ## Setup
 
 The following steps are necessary in order to set up IoTrain-Lab. We
-assumes Ubuntu as the host OS, but other operating systems can be used
+assume Ubuntu as the host OS, but other operating systems can be used
 as well with minor modifications of the setup script.
 
-1. **Run the setup script:** The setup script can be used to install
-the packages `docker` and `docker-compose`, as well as to register the
-CentOS and Moodle containers used by IoTrain-Lab:
+1. **Change default password:** For security reasons, you should
+change the default username and password for the Guacamole PostgreSQL
+database by editing the file `.env` located in the directory
+`docker-guacamole`.
+
+2. **Run the setup script:** The setup script can be used to
+automatically install the Docker-related packages, as well as to build
+and start the CentOS, Guacamole and Moodle containers used by
+IoTrain-Lab:
 	```
 	$ ./setup.sh
 	```
-
-2. **Install the Guacamole container:** Since the procedure requires
-an account configuration, the Guacamole container used by IoTrain-Lab
-must be installed manually, as described next.
-
-	1. Go to the Guacamole container directory:
-		```
-		$ cd docker-compose-guacamole/
-		```
-	2. Change the username and password for the PostgreSQL
-	database in the `.env` file:
-		```
-		$ vi .env
-		```
-	3. Initialize the Guacamole database:
-		```
-		$ docker-compose up init-guacamole-db
-		```
-	4. Create and start the Guacamole container:
-		```
-		$ docker-compose up -d
-		```
 
 ### Notes
 
@@ -58,7 +42,13 @@ must be installed manually, as described next.
   trainees simultaneously.
 * All the container directories in the IoTrain-Lab distribution
   contain `README.md` files with additional information about those
-  containers. Please refer to them for details.
+  containers. Please refer to them for details. Our README file for
+  the Moodle container is named `README_moodle.md` and is located in
+  the top IoTrain-Lab directory.
+* The Moodle container also uses a PostgreSQL database, and for
+  security reasons you should also change that username and password
+  by editing the file `.env` located in the newly-created directory
+  `docker-compose-moodle`, then rebuilding the container.
 
 ### FIT/IoT-LAB account
 
@@ -76,8 +66,8 @@ account on the testbed and configure SSH access, as explained next:
 ## Quick Start
 
 1. **Start all the containers:** Run the command below to start the
-Guacamole, CentOS and Moodle containers (in case they are not running
-already):
+IoTrain-Lab containers (this is not needed if you have just run the
+`setup.sh` script, in which case the containers are already running):
 	```
 	$ docker start $(docker ps -a -q)
 	```
