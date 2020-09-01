@@ -71,33 +71,33 @@ the instructions below:
 		username@saclay:~/RIOT/$ make ETHOS_BAUDRATE=500000 BOARD=iotlab-a8-m3 clean all -C examples/gnrc_border_router
 		```
 
-	- Flash the compiled firmware to the first experiment node by
-	running the following command:
+	- Copy and flash the compiled firmware to the first experiment
+	node by running the following commands:
 		```
-		username@saclay:~/RIOT$ iotlab-ssh flash-m3 examples/gnrc_border_router/bin/iotlab-a8-m3/gnrc_border_router.elf -l saclay,a8,1
+		username@saclay:~/RIOT/$ scp examples/gnrc_border_router/bin/iotlab-a8-m3/gnrc_border_router.elf root@node-a8-1:
+		username@saclay:~/RIOT/$ ssh root@node-a8-1
+		root@node-a8-1:~# flash_a8_m3 gnrc_border_router.elf
 		```
 
 4. Configure the network settings of the border router, as follows:
 
-	- Connect to the node and compile the tool named `uhcpd`
-	(Micro Host Configuration Protocol):
+	- Use the first node to compile the tool named `uhcpd` (Micro
+	Host Configuration Protocol):
 		```
-		username@saclay:~/RIOT$ ssh root@node-a8-1
-		root@node-a8-1:~# cd ~/RIOT/dist/tools/uhcpd
-		root@node-a8-1:~/RIOT/dist/tools/uhcpd# make clean all
+		root@node-a8-1:~# cd ~/A8/riot/RIOT/dist/tools/uhcpd
+		root@node-a8-1:~/A8/riot/RIOT/dist/tools/uhcpd# make clean all
 		```
 
 	- Also compile the tool named `ethos` (Ethernet Over Serial)
 	and configure the public IPv6 network of the node:
 		```
-		root@node-a8-1:~/RIOT/dist/tools/uhcpd# cd ../ethos
-		root@node-a8-1:~/RIOT/dist/tools/ethos# make clean all
-		root@node-a8-1:~/RIOT/dist/tools/ethos# ./start_network.sh /dev/ttyA8_M3
+		root@node-a8-1:~/A8/riot/RIOT/dist/tools/uhcpd# cd ../ethos
+		root@node-a8-1:~/A8/riot/RIOT/dist/tools/ethos# make clean all
+		root@node-a8-1:~/A8/riot/RIOT/dist/tools/ethos# ./start_network.sh /dev/ttyA8_M3 tap0 2001:660:3207:401::/64 500000
 		```
 
 		Output similar to that shown below will be displayed.
 		```
-		tap0 2001:660:3207:401::/64 500000
 		net.ipv6.conf.tap0.forwarding = 1
 		net.ipv6.conf.tap0.accept_ra = 0
 		----> ethos: sending hello.
@@ -170,14 +170,15 @@ example) as an MQTT-SN client:
 		username@saclay:~$ source /opt/riot.source
 		username@saclay:~$ cd RIOT
 		username@saclay:~/RIOT$ make BOARD=iotlab-a8-m3 -C examples/emcute_mqttsn
-		username@saclay:~/RIOT$ iotlab-ssh flash-m3 examples/emcute_mqttsn/bin/iotlab-a8-m3/emcute_mqttsn.elf -l saclay,a8,3
+		username@saclay:~/RIOT/$ scp examples/emcute_mqttsn/bin/iotlab-a8-m3/emcute_mqttsn.elf root@node-a8-3:
+		username@saclay:~/RIOT/$ ssh root@node-a8-3
+		root@node-a8-3:~# flash_a8_m3 emcute_mqttsn.elf
 		```
 
-	- Log in to the third node and connect using the command
-	`miniterm.py` to access the shell interface:
+	- Use the command `miniterm.py` to access the shell interface
+	of the third node:
 		```
-		username@saclay:~/RIOT$ ssh root@node-a8-3
-		root@node-a8-2:~# miniterm.py /dev/ttyA8_M3 500000 -e
+		root@node-a8-3:~# miniterm.py /dev/ttyA8_M3 500000 -e
 		> help
 		```
 
