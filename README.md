@@ -19,8 +19,8 @@ FIT/IoT-LAB testbed.
 ## Setup
 
 The following steps are necessary in order to set up IoTrain-Lab. We
-assume Ubuntu as the host OS, but other operating systems can be used
-as well with minor modifications of the setup script.
+assume Ubuntu 18.04 LTS as the host OS, but other operating systems
+can be used as well with minor modifications of the setup script.
 
 1. **Change default password:** For security reasons, you should
 change the default username and password for the Guacamole PostgreSQL
