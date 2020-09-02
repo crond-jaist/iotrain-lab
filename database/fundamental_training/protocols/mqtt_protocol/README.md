@@ -175,11 +175,13 @@ example) as an MQTT-SN client:
 		root@node-a8-3:~# flash_a8_m3 emcute_mqttsn.elf
 		```
 
-	- Use the command `miniterm.py` to access the shell interface
-	of the third node:
+	- Use the program `miniterm.py` to access the shell interface
+	of the third node, then type "help":
 		```
 		root@node-a8-3:~# miniterm.py /dev/ttyA8_M3 500000 -e
-		> help
+		--- Miniterm on /dev/ttyA8_M3  500000,8,N,1 ---
+		--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+		help
 		```
 
 		The following command menu will be displayed:
@@ -234,3 +236,10 @@ between the MQTT broker and client nodes:
 	SSH frontend (fourth terminal) to subscribe, and the `pub`
 	command on the MQTT-SN client (third terminal) to exchange
 	messages in the opposite direction.
+
+### Note
+
+We noticed that the `miniterm.py` program used at step 6 is unstable
+occasionally, and may quit unexpectedly; please repeat the procedure
+if this happens. This issue seems to be related to the software tools
+provided by FIT/IoT-Lab, and we hope that it will be fixed soon.
