@@ -93,8 +93,12 @@ up the Guacamole service:
 		In order to get the IP addresses of the CentOS and
 		Guacamole containers, use the command `docker exec -ti
 		<CONTAINER_ID> bash` to access the container shell,
-		then the commands `ifconfig` for CentOS and `ipaddr`
-		for Guacamole to check the IP address.
+		then the commands `ifconfig` for CentOS and `ip addr`
+		for Guacamole to check the IP address. You can also
+		refer to the video included on the
+		[releases](https://github.com/crond-jaist/iotrain-lab/releases)
+		page for a step-by-step example of how to configure
+		Guacamole.
 
 3. **Begin the training:** Follow the instructions for each training
 activity available in the directory `database/` (the "Training
